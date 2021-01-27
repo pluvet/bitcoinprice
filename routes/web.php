@@ -21,4 +21,6 @@ Route::get('/', function () {
 
 Route::get('bitcoin/{start}/{end}', [BitcoinController::class, 'show']);
 
+Route::get('consultas', [ConsultaController::class, 'show']);
+
 Route::get('consultas/bitcoin', [ConsultaController::class, 'show']);
