@@ -19,6 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('{start}/{end}', [BitcoinController::class, 'show']);
+Route::get('bitcoin/{start}/{end}', [BitcoinController::class, 'show']);
 
-Route::get('consultas', [ConsultaController::class, 'show']);
+Route::get('bitcoin/consultas', [ConsultaController::class, 'show']);
