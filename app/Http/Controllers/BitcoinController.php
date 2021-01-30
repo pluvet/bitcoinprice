@@ -19,7 +19,7 @@ function request($start){
     ]);
 
     $string = json_decode($res->getBody()->getContents());
-    $array = $array = json_decode(json_encode($string), true);
+    $array = json_decode(json_encode($string), true);
     return $array;
 }
 
