@@ -10,10 +10,11 @@ use GuzzleHttp\Client;
 function request($start){
 
     $client = new Client();
+    $authorization = env('Authorization', '');
     $res = $client->get("https://api.tiingo.com/tiingo/crypto/prices?tickers=btcusd,fldcbtc&startDate=$start&resampleFreq=1440min", [
         'headers' => [
         'Content-type' =>  'application/json',
-        'Authorization'     => 'Token 935dc7e68645aabf61e1170732967a1c89a56ff6'
+        'Authorization'     => $authorization
         ]
     ]);
 
