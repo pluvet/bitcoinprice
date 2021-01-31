@@ -27,11 +27,11 @@ class BitcoinController extends Controller
 {
     private $bitcoin = array();
 
-    public function show(){
+    public function show(Request $request){
 
-        if (isset($_GET['start'])) {
-            $start = $_GET['start'];
-            $end = $_GET['end'];
+        if (isset($request->start)) {
+            $start = $request->start;
+            $end = $request->end;
 
         }else{
             $start = '2020-12-12';
